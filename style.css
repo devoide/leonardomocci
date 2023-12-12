@@ -1,0 +1,66 @@
+/* general ---------------*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #092635;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: "Agency FB", sans-serif;
+}
+/* header ---------------------*/
+/* nav ---------------*/
+nav {
+    height: 75px;
+    background-color: #1B4242;
+}
+
+.rightNav {
+    float: right;
+}
+
+.leftNav {
+    float: left;
+}
+
+.dropdown > a, .leftNav > a, .rightNav > a {
+
+    height: 75px;
+    width: 125px;
+}
+
+.leftNav > a{
+    font-weight: bold;
+    font-size: larger;
+}
+
+nav a:hover {
+    background-color: #5C8374;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1B4242;;
+    width: 125px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* nav end ------------*/
+/* header end ---------------*/
