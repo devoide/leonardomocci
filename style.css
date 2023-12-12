@@ -1,4 +1,8 @@
 /* general ---------------*/
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,8 +10,16 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: white;
+    font-family: "Agency FB", sans-serif;
+}
+
+p, li, h1 {
+    color: white;
+}
+
+h1 {
+    text-align: center;
     font-family: "Agency FB", sans-serif;
 }
 /* header ---------------------*/
@@ -19,28 +31,42 @@ nav {
 
 .rightNav {
     float: right;
+    width: 255px;
 }
 
 .leftNav {
     float: left;
 }
 
-.dropdown > a, .leftNav > a, .rightNav > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav button {
     height: 75px;
     width: 125px;
+    border: solid 0;
+    background-color: #1B4242;
+    color: white;
+    font-family: "Agency FB", sans-serif;
+    font-size: 20px;
 }
 
-.leftNav > a{
+.leftNav > button{
     font-weight: bold;
-    font-size: larger;
+    font-size: 30px;
 }
 
-nav a:hover {
+nav a:hover, nav button:hover {
+    text-decoration: none;
     background-color: #5C8374;
     cursor: pointer;
+}
+
+nav button i{
+    transform: rotate(0);
+    transition: .3s;
+}
+
+nav button:hover i{
+    transform: rotate(180deg);
+    transition: .3s;
 }
 
 .dropdown {
@@ -51,7 +77,8 @@ nav a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #1B4242;;
+    background-color: #1B4242;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     width: 125px;
     z-index: 1;
 }
@@ -59,6 +86,8 @@ nav a:hover {
 .dropdown-content a {
     display: block;
     padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 .dropdown:hover .dropdown-content {
@@ -66,3 +95,32 @@ nav a:hover {
 }
 /* nav end ------------*/
 /* header end ---------------*/
+/* main ---------------------*/
+.introduction {
+    border: solid;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.recentPosts {
+    border: solid;
+    margin: auto;
+    width: 50vw;
+}
+
+.projects {
+    border: solid;
+    text-align: center;
+}
+
+/* carousel -----------------*/
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
